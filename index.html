@@ -21,23 +21,22 @@
 <html lang="en">
   <body>
     <main class="main-wrapper">
-      <aside class="sidebar">
-        <div class="profile-wrapper">
-          <h1 class="profile">AL</h1>
+      <nav id="sidebar" class="sidebar">
+        <div class="toggle-container">
+          <!--https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp-->
+          <a href="javascript:void(0)" class="menu-toggle" onclick="toggleNavbar()">☰</a>
         </div>
-        <nav class="navbar">
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#prev">Previous Work</a></li>
-            <li><a href="#classes">Classes</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </aside>
+        <ul class="sidebar-content">
+          <li><a href="#about">About</a></li>
+          <li><a href="#prev">Work</a></li>
+          <li><a href="#classes">Classes</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-      <div class="content">
+      <div id="content" class="content">
         <section id="about" class="section about">
           <h1>About</h1>
           <p>Hello, I'm a Computer Scientist located in the United States.</p>
@@ -65,5 +64,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="interaction.js"></script>
   </body>
 </html>
