@@ -1,10 +1,13 @@
 //https://stackoverflow.com/questions/39903036/open-close-sidenav-bar-same-button
 function toggleNavbar() {
   let size = document.getElementById("sidebar").style.width;
-  if (size == "175px") {
-    closeNavbar();
-  } else {
-    openNavbar();
+  var media = window.matchMedia("(max-width: 768px)");
+  if(media.matches){
+    if (size == "175px") {
+        closeNavbar();
+      } else {
+        openNavbar();
+      }
   }
 }
 

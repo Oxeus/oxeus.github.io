@@ -16,6 +16,11 @@
   .sidebar {
     width: 45px;
   }
+  
+  #toggle {
+    display: block;
+  }
+
   .content {
     margin-left: 45px;
   }
@@ -38,6 +43,11 @@
   .sidebar {
     width: 45px;
   }
+
+  #toggle {
+    display: block;
+  }
+
   .content {
     margin-left: 45px;
   }
@@ -60,6 +70,11 @@
   .sidebar {
     width: var(--sidebar-width);
   }
+
+  #toggle {
+    display: none;
+  }
+
   .content {
     margin-left: var(--sidebar-width);
   }
@@ -83,6 +98,11 @@
   .content {
     margin-left: var(--sidebar-width);
   }
+
+  #toggle {
+    display: none;
+  }
+  
   .about {
     grid-template-areas:
       "head head head"
@@ -92,7 +112,7 @@
   .classes {
     grid-template-areas:
       "head head head"
-      "upper lower elec";
+      "lower upper elec";
   }
 }
 
