@@ -8,13 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Adam La Fleur</title>
-
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-    crossorigin="anonymous"
-  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -31,20 +24,20 @@
             >☰</a
           >
         </div>
-        <ul class="sidebar-content">
-          <li><a href="#about">About</a></li>
-          <li><a href="#prev">Work</a></li>
-          <li><a href="#classes">Classes</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul id="sidebar-content" class="sidebar-content">
+          <li><a class="navbtn" href="#about">About</a></li>
+          <li><a class="navbtn" href="#prev">Work</a></li>
+          <li><a class="navbtn" href="#classes">Classes</a></li>
+          <li><a class="navbtn" href="#skills">Skills</a></li>
+          <li><a class="navbtn" href="#projects">Projects</a></li>
+          <li><a class="navbtn" href="#contact">Contact</a></li>
         </ul>
       </nav>
 
       <div id="content" class="content">
         <section id="about" class="section about">
           <h1 class="head">About</h1>
-          <p class="text">
+          <p class="about-text">
             Hello, I am a pending graduate from Portland State University with a
             B.S in Computer Science. I have put myself through school and don't
             have much experince in the tech field as of yet but have had plenty
@@ -59,23 +52,123 @@
             reach me at the contact form below.
           </p>
           <div class="profile-container">
-            <img class="profile" src="images/profile.jpg" />
+            <img
+              class="profile"
+              src="images/profile.jpg"
+              alt="Developer Profile Image"
+            />
           </div>
         </section>
         <section id="prev" class="section prev">
-          <h1>Previous Work</h1>
+          <h1 class="head">Work</h1>
+          <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion-->
+          <div class="work">
+            <button class="accord">Best Buy - Inventory Specialist</button>
+            <div class="work-block">
+              <ul>
+                <li>Current Job (2019-Present)</li>
+                <li>Deals with working with Inventory Management Systems.</li>
+                <li>Requires attention to detail and keeping precise notes.</li>
+                <li>
+                  Constant Learning Exerience, allows me to see the retail side
+                  of business.
+                </li>
+                <li>
+                  Gave me experience with interacting with customers and finding
+                  out their needs.
+                </li>
+              </ul>
+            </div>
+            <button class="accord">Sears - Inventory Specialist</button>
+            <div class="work-block">
+              <ul>
+                <li>Past Job (2018-2019)</li>
+                <li>Deals with working with Inventory Management Systems.</li>
+                <li>Requires attention to detail and keeping precise notes.</li>
+                <li>
+                  Constant Learning Exerience, allows me to see the retail side
+                  of business.
+                </li>
+                <li>
+                  Gave me experience with interacting with customers and finding
+                  out their needs.
+                </li>
+              </ul>
+            </div>
+            <button class="accord">
+              Little Engineers - Instructor/Technician
+            </button>
+            <div class="work-block">
+              <ul>
+                <li>Past Job (2015-2019)</li>
+                <li>
+                  Was in charge of keeping track that all of the tech was kept
+                  up to date.
+                </li>
+                <li>
+                  Instructed others on topics deeling with engineering, robots,
+                  and coding.
+                </li>
+                <li>
+                  Was a learning experience on the best ways of instructing
+                  others to complete a task.
+                </li>
+                <li>
+                  Gave me experience with interacting with customers and finding
+                  out their needs.
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
         <section id="classes" class="section classes">
-          <h1>Classes</h1>
+          <h1 class="head">Classes</h1>
+          <div class="upper-div">
+            <h2>Upper Division</h2>
+            <ul class>
+              <li>CS300 - Elements of Software Engineering</li>
+              <li>CS320 - Principles of Programming Languages</li>
+              <li>CS333 - Introduction to Operating Systems</li>
+              <li>CS350 - Algorithms and Complexity</li>
+              <li>CS470 - Software Engineering Capstone I</li>
+              <li>CS470 - Software Engineering Capstone II</li>
+              <li>CS486 - Introduction to Database Management Systems</li>
+            </ul>
+          </div>
+          <div class="lower-div">
+            <h2>Lower Division</h2>
+            <ul>
+              <li>CS162 - Introduction to Computer Science</li>
+              <li>CS163 - Data Structures</li>
+              <li>CS201 - Computer Systems Programming</li>
+              <li>CS202 - Programming Systems</li>
+              <li>CS250 - Discrete Structures I</li>
+              <li>CS251 - Discrete Structures II</li>
+              <li>
+                CS305 - Social, Ethical, and Legal Implications of Computing
+              </li>
+            </ul>
+          </div>
+          <div class="elec">
+            <h2>Electives</h2>
+            <ul>
+              <li>CS 311 Computational Structures</li>
+              <li>CS410P - Top: Computers, Sound and Music</li>
+              <li>CS410 - Top: Virtual Reality</li>
+              <li>CS410 - Top: Voice Assistants</li>
+              <li>CS410 - Top: Introduction to Web Development</li>
+              <li>CS454 - Software Engineering</li>
+            </ul>
+          </div>
         </section>
         <section id="skills" class="section skills">
-          <h1>Skills</h1>
+          <h1 class="head">Skills</h1>
         </section>
-        <section id="projects" class="section about">
-          <h1>Projects</h1>
+        <section id="projects" class="section projects">
+          <h1 class="head">Projects</h1>
         </section>
-        <section id="contact" class="section about">
-          <h1>Contact</h1>
+        <section id="contact" class="section contact">
+          <h1 class="head">Contact</h1>
           <form></form>
         </section>
       </div>

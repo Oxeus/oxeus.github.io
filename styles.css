@@ -9,39 +9,90 @@
   --side: var(--dark-blue);
   --back: var(--shadow-of-dark-blue);
   --text: var(--shadow-of-light-blue);
+  box-sizing: border-box;
 }
 
 @media only screen and (max-width: 414px) {
+  .sidebar {
+    width: 45px;
+  }
+  .content {
+    margin-left: 45px;
+  }
   .about {
     grid-template-areas:
       "head head"
       "image image"
       "text text";
   }
+  .classes {
+    grid-template-areas:
+      "head"
+      "upper"
+      "lower"
+      "elec";
+  }
 }
 
 @media only screen and (min-width: 415px) and (max-width: 768px) {
+  .sidebar {
+    width: 45px;
+  }
+  .content {
+    margin-left: 45px;
+  }
   .about {
     grid-template-areas:
       "head head head"
       "blank1 image blank2"
       "text text text";
   }
+
+  .classes {
+    grid-template-areas:
+      "head head"
+      "upper lower"
+      "elec elec";
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px){
+  .sidebar {
+    width: var(--sidebar-width);
+  }
+  .content {
+    margin-left: var(--sidebar-width);
+  }
   .about {
     grid-template-areas:
       "head head"
       "text image";
   }
+
+  .classes {
+    grid-template-areas:
+      "head head head"
+      "upper lower elec";
+  }
 }
 
 @media only screen and (min-width: 1025px) {
+  .sidebar {
+    width: var(--sidebar-width);
+  }
+  .content {
+    margin-left: var(--sidebar-width);
+  }
   .about {
     grid-template-areas:
       "head head head"
       "text text image";
+  }
+  
+  .classes {
+    grid-template-areas:
+      "head head head"
+      "upper lower elec";
   }
 }
 
@@ -84,7 +135,7 @@ body {
   width: var(--sidebar-width);
 }
 
-.sidebar ul li a {
+.sidebar-content li a {
   display: block;
   color: var(--text);
   padding: 20px;
@@ -93,8 +144,8 @@ body {
   text-decoration: none;
 }
 
-.sidebar ul li a:hover {
-  color: var(--lighter-blue);
+.sidebar-content li a:hover {
+  color: var(--lightest-blue);
 }
 
 .menu-toggle {
@@ -114,23 +165,27 @@ body {
   width: 100%;
   flex-grow: 1;
   overflow: auto;
-  transition: 0.5s;
+  transition: .5s;
 }
 
 .section {
   padding: 10px;
   width: 100%;
-  text-align: center;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
 }
 
 .head {
-  grid-area: head;
+  text-align: center;
 }
 
-.text {
+.head {
+  grid-area: head;
+  font-size: 40px;
+}
+
+.about-text {
   grid-area: text;
   padding: 0;
   margin: auto;
@@ -150,4 +205,59 @@ body {
   max-height: 100%;
   border-radius: 50px;
   border: 10px solid var(--dark-blue);
+}
+
+.prev {
+  grid-template-areas: 
+  "head"
+  "work";
+}
+
+.work {
+  grid-area: work;
+  width: 100%;
+  padding: 50px 10px 50px 10px;
+}
+
+.work-block {
+  width: 100%;
+  display: none;
+  border: 5px solid var(--dark-blue);
+  padding: 10px;
+  text-align: left;
+}
+
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion */
+.accord {
+  width: 100%;
+  background-color: var(--dark-blue);
+  color: var(--shadow-of-light-blue);
+  border: 0px;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+.accord:hover {
+  background-color: var(--lightest-blue);
+}
+
+.classes {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+}
+
+.upper-div {
+  grid-area: upper;
+  padding: 10px;
+}
+
+.lower-div {
+  grid-area: lower;
+  padding: 10px;
+}
+
+.elec {
+  grid-area: elec;
+  padding: 10px;
 }

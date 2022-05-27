@@ -12,26 +12,26 @@ function toggleNavbar() {
 function openNavbar() {
   document.getElementById("sidebar").style.setProperty("width", "175px");
   document.getElementById("content").style.setProperty("margin-left", "175px");
+  document.getElementById("sidebar-content").style.setProperty("display", "block");
 }
 
 //https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp
 function closeNavbar() {
   document.getElementById("sidebar").style.setProperty("width", "45px");
   document.getElementById("content").style.setProperty("margin-left", "45px");
+  document.getElementById("sidebar-content").style.setProperty("display", "none");
 }
 
 //https://www.w3schools.com/howto/howto_js_media_queries.asp
 function mobileNavbar(media) {
   if (media.matches) {
-    document.getElementById("sidebar").style.setProperty("width", "45px");
-    document.getElementById("content").style.setProperty("margin-left", "45px");
+    closeNavbar();
   }
 }
 
 function desktopNavbar(media_large) {
   if (media_large.matches) {
-    document.getElementById("sidebar").style.setProperty("width", "175px");
-    document.getElementById("content").style.setProperty("margin-left", "175px");
+    openNavbar();
   }
 }
 
@@ -42,18 +42,34 @@ function change() {
 
   var media_large = window.matchMedia("(min-width: 769px)");
   media_large.addEventListener("change", desktopNavbar);
+
+  //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion
+  var acc = document.getElementsByClassName("accord");
+  for (let i = 0; i < acc.length; ++i) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var block = this.nextElementSibling;
+      if (block.style.display === "block") {
+        block.style.display = "none";
+      } else {
+        block.style.display = "block";
+      }
+    });
+  }
+  var navbtns = document.getElementsByClassName("navbtn");
+  for (let i = 0; i < navbtns.length; ++i) {
+    navbtns[i].addEventListener("click", toggleNavbar);
+  }
 }
 
 function load() {
   var media = window.matchMedia("(max-width: 768px)");
   var media_large = window.matchMedia("(min-width: 769px)");
   if (media.matches) {
-    document.getElementById("sidebar").style.setProperty("width", "45px");
-    document.getElementById("content").style.setProperty("margin-left", "45px");
+    closeNavbar();
   }
-  if(media_large.matches){
-    document.getElementById("sidebar").style.setProperty("width", "175px");
-    document.getElementById("content").style.setProperty("margin-left", "175px");
+  if (media_large.matches) {
+    openNavbar();
   }
 }
 
