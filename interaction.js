@@ -1,40 +1,41 @@
 //https://stackoverflow.com/questions/39903036/open-close-sidenav-bar-same-button
+//Only active on mobile
 function toggleNavbar() {
   let size = document.getElementById("sidebar").style.width;
   var media = window.matchMedia("(max-width: 768px)");
   if(media.matches){
-    if (size == "175px") {
-        closeNavbar();
+    if (size == "45px") {
+        openNavbar("100%", "45px");
       } else {
-        openNavbar();
+        closeNavbar("45px", "45px");
       }
   }
 }
 
 //https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp
-function openNavbar() {
-  document.getElementById("sidebar").style.setProperty("width", "175px");
-  document.getElementById("content").style.setProperty("margin-left", "175px");
+function openNavbar(width, margin_open) {
+  document.getElementById("sidebar").style.setProperty("width", width);
+  document.getElementById("content").style.setProperty("margin-left", margin_open);
   document.getElementById("sidebar-content").style.setProperty("display", "block");
 }
 
 //https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp
-function closeNavbar() {
-  document.getElementById("sidebar").style.setProperty("width", "45px");
-  document.getElementById("content").style.setProperty("margin-left", "45px");
+function closeNavbar(width, margin_close) {
+  document.getElementById("sidebar").style.setProperty("width", width);
+  document.getElementById("content").style.setProperty("margin-left", margin_close);
   document.getElementById("sidebar-content").style.setProperty("display", "none");
 }
 
 //https://www.w3schools.com/howto/howto_js_media_queries.asp
 function mobileNavbar(media) {
   if (media.matches) {
-    closeNavbar();
+    closeNavbar("45px", "45px");
   }
 }
 
 function desktopNavbar(media_large) {
   if (media_large.matches) {
-    openNavbar();
+    openNavbar("175px", "175px");
   }
 }
 
@@ -69,10 +70,10 @@ function load() {
   var media = window.matchMedia("(max-width: 768px)");
   var media_large = window.matchMedia("(min-width: 769px)");
   if (media.matches) {
-    closeNavbar();
+    closeNavbar("45px", "45px");
   }
   if (media_large.matches) {
-    openNavbar();
+    openNavbar("175px", "175px");
   }
 }
 

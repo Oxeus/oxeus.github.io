@@ -102,7 +102,7 @@
   #toggle {
     display: none;
   }
-  
+
   .about {
     grid-template-areas:
       "head head head"
@@ -150,7 +150,7 @@ body {
 .sidebar-content {
   list-style-type: none;
   text-align: center;
-  margin: 0;
+  margin: auto;
   padding: 0;
   width: var(--sidebar-width);
 }
