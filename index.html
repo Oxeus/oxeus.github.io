@@ -8,256 +8,310 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Adam La Fleur</title>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-    crossorigin="anonymous"
-  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <html lang="en">
-  <body onload="load();">
-    <main class="main-wrapper">
-      <nav id="sidebar" class="sidebar">
-        <div class="toggle-container">
-          <!--https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp-->
-          <a
-            id="toggle"
-            href="javascript:void(0)"
-            class="menu-toggle"
-            onclick="toggleNavbar()"
-            >☰</a
-          >
-        </div>
-        <ul id="sidebar-content" class="sidebar-content">
-          <li><a class="navbtn" href="#about">About</a></li>
-          <li><a class="navbtn" href="#prev">Work</a></li>
-          <li><a class="navbtn" href="#classes">Classes</a></li>
-          <li><a class="navbtn" href="#skills">Skills</a></li>
-          <li><a class="navbtn" href="#projects">Projects</a></li>
-          <li><a class="navbtn" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
 
-      <div id="content" class="content">
-        <section id="about" class="section about">
-          <h1 class="center head-main">About</h1>
-          <p class="about-text">
-            Hello, I am a pending graduate from Portland State University with a
-            B.S in Computer Science. I have put myself through school and don't
-            have much experince in the tech field as of yet but have had plenty
-            of experience working at companies that taught me the fundamental.
-            In my free time I enjoy playing video games and developing software
-            where I test out various ideas that I think up. General Software
-            Engineering interests me but I tend to gravitate towards programming
-            video games. Throughout my studies I focused on general coding
-            knowledge and software engineering. In the future I hope to learn
-            and experience more with whatever companies I will eventualy work
-            with. If you think I would add value to your company feel free to
-            reach me at the contact form below.
-          </p>
-          <div class="profile-container">
-            <img
-              class="profile"
-              src="images/profile.jpg"
-              alt="Developer Profile Image"
-            />
-          </div>
-        </section>
-        <section id="prev" class="section prev">
-          <h1 class="center head-main">Work</h1>
-          <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion-->
-          <div class="work">
-            <button class="accord">Best Buy - Inventory Specialist</button>
-            <div class="work-block">
-              <ul>
-                <li>Current Job (2019-Present)</li>
-                <li>Deals with working with Inventory Management Systems.</li>
-                <li>Requires attention to detail and keeping precise notes.</li>
-                <li>
-                  Constant Learning Exerience, allows me to see the retail side
-                  of business.
-                </li>
-                <li>
-                  Gave me experience with interacting with customers and finding
-                  out their needs.
-                </li>
-              </ul>
-            </div>
-            <button class="accord">Sears - Inventory Specialist</button>
-            <div class="work-block">
-              <ul>
-                <li>Past Job (2018-2019)</li>
-                <li>Deals with working with Inventory Management Systems.</li>
-                <li>Requires attention to detail and keeping precise notes.</li>
-                <li>
-                  Constant Learning Exerience, allows me to see the retail side
-                  of business.
-                </li>
-                <li>
-                  Gave me experience with interacting with customers and finding
-                  out their needs.
-                </li>
-              </ul>
-            </div>
-            <button class="accord">
-              Little Engineers - Instructor/Technician
-            </button>
-            <div class="work-block">
-              <ul>
-                <li>Past Job (2015-2019)</li>
-                <li>
-                  Was in charge of keeping track that all of the tech was kept
-                  up to date.
-                </li>
-                <li>
-                  Instructed others on topics deeling with engineering, robots,
-                  and coding.
-                </li>
-                <li>
-                  Was a learning experience on the best ways of instructing
-                  others to complete a task.
-                </li>
-                <li>
-                  Gave me experience with interacting with customers and finding
-                  out their needs.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section id="classes" class="section classes">
-          <h1 class="center head-main">Classes</h1>
-          <div class="upper-div">
-            <h2 class="center">Upper Division</h2>
-            <ul class>
-              <li>CS300 - Elements of Software Engineering</li>
-              <li>CS320 - Principles of Programming Languages</li>
-              <li>CS333 - Introduction to Operating Systems</li>
-              <li>CS350 - Algorithms and Complexity</li>
-              <li>CS470 - Software Engineering Capstone I</li>
-              <li>CS470 - Software Engineering Capstone II</li>
-              <li>CS486 - Introduction to Database Management Systems</li>
-            </ul>
-          </div>
-          <div class="lower-div">
-            <h2 class="center">Lower Division</h2>
+<body onload="load();">
+  <main class="main-wrapper">
+    <nav id="sidebar" class="sidebar">
+      <div class="toggle-container">
+        <!--https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp-->
+        <a id="toggle" href="javascript:void(0)" class="menu-toggle" onclick="toggleNavbar()">☰</a>
+      </div>
+      <ul id="sidebar-content" class="sidebar-content">
+        <li><a class="navbtn" href="#about">About</a></li>
+        <li><a class="navbtn" href="#prev">Work</a></li>
+        <li><a class="navbtn" href="#classes">Classes</a></li>
+        <li><a class="navbtn" href="#skills">Skills</a></li>
+        <li><a class="navbtn" href="#projects">Projects</a></li>
+        <li><a class="navbtn" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div id="content" class="content">
+      <section id="about" class="section about">
+        <h1 class="center head-main">About</h1>
+        <p class="about-text">
+          Hello, I am a pending graduate from Portland State University with a
+          B.S in Computer Science. I have put myself through school and don't
+          have much experince in the tech field as of yet but have had plenty
+          of experience working at companies that taught me the fundamental.
+          In my free time I enjoy playing video games and developing software
+          where I test out various ideas that I think up. General Software
+          Engineering interests me but I tend to gravitate towards programming
+          video games. Throughout my studies I focused on general coding
+          knowledge and software engineering. In the future I hope to learn
+          and experience more with whatever companies I will eventualy work
+          with. If you think I would add value to your company feel free to
+          reach me at the contact form below.
+        </p>
+        <div class="profile-container">
+          <img class="profile" src="images/profile.jpg" alt="Developer Profile Image" />
+        </div>
+      </section>
+      <section id="prev" class="section prev">
+        <h1 class="center head-main">Work</h1>
+        <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion-->
+        <div class="work">
+          <button class="accord">Best Buy - Inventory Specialist</button>
+          <div class="work-block">
             <ul>
-              <li>CS162 - Introduction to Computer Science</li>
-              <li>CS163 - Data Structures</li>
-              <li>CS201 - Computer Systems Programming</li>
-              <li>CS202 - Programming Systems</li>
-              <li>CS250 - Discrete Structures I</li>
-              <li>CS251 - Discrete Structures II</li>
+              <li>Current Job (2019-Present)</li>
+              <li>Deals with working with Inventory Management Systems.</li>
+              <li>Requires attention to detail and keeping precise notes.</li>
               <li>
-                CS305 - Social, Ethical, and Legal Implications of Computing
+                Constant Learning Exerience, allows me to see the retail side
+                of business.
+              </li>
+              <li>
+                Gave me experience with interacting with customers and finding
+                out their needs.
               </li>
             </ul>
           </div>
-          <div class="elec">
-            <h2 class="center">Electives</h2>
+          <button class="accord">Sears - Inventory Specialist</button>
+          <div class="work-block">
             <ul>
-              <li>CS 311 Computational Structures</li>
-              <li>CS410P - Top: Computers, Sound and Music</li>
-              <li>CS410 - Top: Virtual Reality</li>
-              <li>CS410 - Top: Voice Assistants</li>
-              <li>CS410 - Top: Introduction to Web Development</li>
-              <li>CS454 - Software Engineering</li>
+              <li>Past Job (2018-2019)</li>
+              <li>Deals with working with Inventory Management Systems.</li>
+              <li>Requires attention to detail and keeping precise notes.</li>
+              <li>
+                Constant Learning Exerience, allows me to see the retail side
+                of business.
+              </li>
+              <li>
+                Gave me experience with interacting with customers and finding
+                out their needs.
+              </li>
             </ul>
           </div>
-        </section>
-        <section id="skills" class="section skills">
-          <h1 class="center head-main">Skills</h1>
-          <div class="tech">
-            <h2 class="center">Technical</h2>
-            <!--https://www.w3schools.com/howto/howto_css_skill_bar.asp-->
-            <div class="skill-cont">
-              <div class="skill html">
-                <p>HTML</p>
-                <p>80%</p>
-              </div>
-            </div>
-            <div class="skill-cont">
-              <div class="skill css">
-                <p>CSS</p>
-                <p>70%</p>
-              </div>
-            </div>
-            <div class="skill-cont">
-              <div class="skill javascript">
-                <p>JavaScript</p>
-                <p>65%</p>
-              </div>
-            </div>
-            <div class="skill-cont">
-              <div class="skill cpp">
-                <p>C++</p>
-                <p>90%</p>
-              </div>
-            </div>
-            <div class="skill-cont">
-              <div class="skill java">
-                <p>Java</p>
-                <p>80%</p>
-              </div>
-            </div>
-            <div class="skill-cont">
-              <div class="skill python">
-                <p>Python</p>
-                <p>85%</p>
-              </div>
+          <button class="accord">
+            Little Engineers - Instructor/Technician
+          </button>
+          <div class="work-block">
+            <ul>
+              <li>Past Job (2015-2019)</li>
+              <li>
+                Was in charge of keeping track that all of the tech was kept
+                up to date.
+              </li>
+              <li>
+                Instructed others on topics deeling with engineering, robots,
+                and coding.
+              </li>
+              <li>
+                Was a learning experience on the best ways of instructing
+                others to complete a task.
+              </li>
+              <li>
+                Gave me experience with interacting with customers and finding
+                out their needs.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="classes" class="section classes">
+        <h1 class="center head-main">Classes</h1>
+        <div class="upper-div">
+          <h2 class="center">Upper Division</h2>
+          <ul class>
+            <li>CS300 - Elements of Software Engineering</li>
+            <li>CS320 - Principles of Programming Languages</li>
+            <li>CS333 - Introduction to Operating Systems</li>
+            <li>CS350 - Algorithms and Complexity</li>
+            <li>CS470 - Software Engineering Capstone I</li>
+            <li>CS470 - Software Engineering Capstone II</li>
+            <li>CS486 - Introduction to Database Management Systems</li>
+          </ul>
+        </div>
+        <div class="lower-div">
+          <h2 class="center">Lower Division</h2>
+          <ul>
+            <li>CS162 - Introduction to Computer Science</li>
+            <li>CS163 - Data Structures</li>
+            <li>CS201 - Computer Systems Programming</li>
+            <li>CS202 - Programming Systems</li>
+            <li>CS250 - Discrete Structures I</li>
+            <li>CS251 - Discrete Structures II</li>
+            <li>
+              CS305 - Social, Ethical, and Legal Implications of Computing
+            </li>
+          </ul>
+        </div>
+        <div class="elec">
+          <h2 class="center">Electives</h2>
+          <ul>
+            <li>CS 311 Computational Structures</li>
+            <li>CS410P - Top: Computers, Sound and Music</li>
+            <li>CS410 - Top: Virtual Reality</li>
+            <li>CS410 - Top: Voice Assistants</li>
+            <li>CS410 - Top: Introduction to Web Development</li>
+            <li>CS454 - Software Engineering</li>
+          </ul>
+        </div>
+      </section>
+      <section id="skills" class="section skills">
+        <h1 class="center head-main">Skills</h1>
+        <div class="tech">
+          <h2 class="center">Technical</h2>
+          <!--https://www.w3schools.com/howto/howto_css_skill_bar.asp-->
+          <div class="skill-container">
+            <div class="skill html">
+              <p>HTML</p>
+              <p>80%</p>
             </div>
           </div>
-          <div class="pers">
-            <h2 class="center">Personal</h2>
-            <div class="skill-cont">
-              <div class="skill multi">
-                <p>Multitasking</p>
-                <p>90%</p>
-              </div>
-            </div>
-            <div class="skill-cont">
-              <div class="skill organ">
-                <p>Organization</p>
-                <p>95%</p>
-              </div>
-            </div>
-            <div class="skill-cont">
-              <div class="skill team">
-                <p>Teamwork</p>
-                <p>85%</p>
-              </div>
-            </div>
-            <div class="skill-cont">
-              <div class="skill comm">
-                <p>Communication</p>
-                <p>80%</p>
-              </div>
-            </div>
-            <div class="skill-cont">
-              <div class="skill atte">
-                <p>Attentive</p>
-                <p>90%</p>
-              </div>
+          <div class="skill-container">
+            <div class="skill css">
+              <p>CSS</p>
+              <p>70%</p>
             </div>
           </div>
-        </section>
-        <section id="projects" class="section projects">
-          <h1 class="center head">Projects</h1>
-        </section>
-        <section id="contact" class="section contact">
-          <h1 class="center head">Contact</h1>
-          <form></form>
-        </section>
-      </div>
-    </main>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script type="text/javascript" src="interaction.js"></script>
-  </body>
+          <div class="skill-container">
+            <div class="skill javascript">
+              <p>JavaScript</p>
+              <p>65%</p>
+            </div>
+          </div>
+          <div class="skill-container">
+            <div class="skill cpp">
+              <p>C++</p>
+              <p>90%</p>
+            </div>
+          </div>
+          <div class="skill-container">
+            <div class="skill java">
+              <p>Java</p>
+              <p>80%</p>
+            </div>
+          </div>
+          <div class="skill-container">
+            <div class="skill python">
+              <p>Python</p>
+              <p>85%</p>
+            </div>
+          </div>
+        </div>
+        <div class="pers">
+          <h2 class="center">Personal</h2>
+          <div class="skill-container">
+            <div class="skill multi">
+              <p>Multitasking</p>
+              <p>90%</p>
+            </div>
+          </div>
+          <div class="skill-container">
+            <div class="skill organ">
+              <p>Organization</p>
+              <p>95%</p>
+            </div>
+          </div>
+          <div class="skill-container">
+            <div class="skill team">
+              <p>Teamwork</p>
+              <p>85%</p>
+            </div>
+          </div>
+          <div class="skill-container">
+            <div class="skill comm">
+              <p>Communication</p>
+              <p>80%</p>
+            </div>
+          </div>
+          <div class="skill-container">
+            <div class="skill atte">
+              <p>Attentive</p>
+              <p>90%</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="projects" class="section projects">
+        <h1 class="center head">Projects</h1>
+        <div class="proj">
+          <!--https://getbootstrap.com/docs/5.2/components/carousel/ taken and altered from here-->
+          <div id="carouselProjects" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="proj-slide">
+                  <div class="link center">
+                    <a href="https://github.com/GroupD-TGOF/GroupD_TGOF"><i
+                        class="fa-brands fa-github fa-3x center awesome">
+                        Frupal</i></a>
+                  </div>
+                  <div class="desc center">
+                    <p>
+                      This was a project done for CS300 where we created a
+                      game with the specifications provided by the teacher.
+                      The player can move around the map and try to collect
+                      the jewels in the map, there are also various obstacles
+                      that can prevent the player from reaching this goal. The
+                      project was done in Python and was my first experience
+                      working in a group.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="proj-slide">
+                  <div class="link center">
+                    <a href="https://github.com/PDX-Effects/sound_project"><i
+                        class="fa-brands fa-github fa-3x center awesome">
+                        PDX-Effects</i></a>
+                  </div>
+                  <div class="desc center">
+                    <p>This was a project</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="proj-slide">
+                  <div class="link center">
+                    <a href="https://github.com/FallCapstone-GroupA/KnowledgeGraph"><i
+                        class="fa-brands fa-github fa-3x center awesome">
+                        Knowledge Graph</i></a>
+                  </div>
+                  <div class="desc center">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjects" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProjects" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="section contact">
+        <h1 class="center head">Contact</h1>
+        <form></form>
+      </section>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/34ac649a86.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="interaction.js"></script>
+</body>
+
 </html>
