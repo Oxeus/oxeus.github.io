@@ -16,7 +16,7 @@
   .sidebar {
     width: 45px;
   }
-  
+
   #toggle {
     display: block;
   }
@@ -36,6 +36,13 @@
       "upper"
       "lower"
       "elec";
+  }
+
+  .skills {
+    grid-template-areas:
+    "head"
+    "tech"
+    "pers";
   }
 }
 
@@ -64,9 +71,16 @@
       "upper lower"
       "elec elec";
   }
+
+  .skills {
+    grid-template-areas:
+      "head"
+      "tech"
+      "pers";
+  }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px){
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
   .sidebar {
     width: var(--sidebar-width);
   }
@@ -89,6 +103,12 @@
       "head head head"
       "upper lower elec";
   }
+
+  .skills {
+    grid-template-areas:
+      "head head"
+      "tech pers";
+  }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -108,11 +128,17 @@
       "head head head"
       "text text image";
   }
-  
+
   .classes {
     grid-template-areas:
       "head head head"
       "lower upper elec";
+  }
+
+  .skills {
+    grid-template-areas:
+      "head head"
+      "tech pers";
   }
 }
 
@@ -185,7 +211,7 @@ body {
   width: 100%;
   flex-grow: 1;
   overflow: auto;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .section {
@@ -196,11 +222,12 @@ body {
   grid-template-rows: auto;
 }
 
-.head {
+.center {
   text-align: center;
 }
 
-.head {
+
+.head-main {
   grid-area: head;
   font-size: 40px;
 }
@@ -228,9 +255,9 @@ body {
 }
 
 .prev {
-  grid-template-areas: 
-  "head"
-  "work";
+  grid-template-areas:
+    "head"
+    "work";
 }
 
 .work {
@@ -252,7 +279,7 @@ body {
   width: 100%;
   background-color: var(--dark-blue);
   color: var(--shadow-of-light-blue);
-  border: 0px;
+  border: 2px solid var(--dark-blue);
   font-size: 20px;
   transition: 0.5s;
 }
@@ -280,4 +307,82 @@ body {
 .elec {
   grid-area: elec;
   padding: 10px;
+}
+
+.skills {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+}
+
+.pers {
+  grid-area: pers;
+  padding: 10px;
+}
+
+.tech {
+  grid-area: tech;
+  padding: 10px;
+}
+
+.skill-cont {
+  background-color: var(--dark-blue);
+  border-radius: 25px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.skill {
+  text-align: right;
+  border-radius: 25px;
+  height: 25px;
+  background-color: var(--shadow-of-dark-blue);
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px 0px 10px;
+}
+
+.html {
+  width: 80%;
+}
+
+.css {
+  width: 70%;
+}
+
+.javascript {
+  width: 65%;
+}
+
+.cpp {
+  width: 90%;
+}
+
+.java {
+  width: 80%;
+}
+
+.python {
+  width: 85%;
+}
+
+.multi {
+  width: 90%;
+}
+
+.organ {
+  width: 90%;
+}
+
+.team {
+  width: 85%;
+}
+
+.comm {
+  width: 80%;
+}
+
+.atte {
+  width: 90%;
 }
