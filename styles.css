@@ -325,6 +325,7 @@ body {
   padding: 10px;
 }
 
+/*https://www.w3schools.com/howto/howto_css_skill_bar.asp*/
 .skill-cont {
   background-color: var(--dark-blue);
   border-radius: 25px;
@@ -333,6 +334,7 @@ body {
   width: 100%;
 }
 
+/*https://www.w3schools.com/howto/howto_css_skill_bar.asp*/
 .skill {
   border-radius: 25px;
   height: 25px;
@@ -342,6 +344,7 @@ body {
   padding: 0px 10px 0px 10px;
 }
 
+/*https://www.w3schools.com/howto/howto_css_skill_bar.asp*/
 .html {
   width: 80%;
 }
