@@ -7,7 +7,9 @@
   <meta name="author" content="'Adam La Fleur" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Adam La Fleur</title>
+  <title>Resume - Adam La Fleur</title>
+  <link rel="icon" href="images/name.png" type="icon/png">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
   <link rel="stylesheet" href="styles.css" />
@@ -16,14 +18,16 @@
 <html lang="en">
 
 <body onload="load();">
-  <main class="main-wrapper">
+  <main class="main-wrapper full">
     <header>
       <nav id="sidebar" class="sidebar">
-        <div class="toggle-container">
+        <div class="toggle-container full">
           <!--https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp-->
           <a id="toggle" href="javascript:void(0)" class="menu-toggle" onclick="toggleNavbar()">☰</a>
         </div>
         <ul id="sidebar-content" class="sidebar-content">
+          <li><a class="navbtn" href=""><img src="images/name.png" height="51px" width="75px" alt="home button"></a>
+          </li>
           <li><a class="navbtn" href="#about">About</a></li>
           <li><a class="navbtn" href="#prev">Work</a></li>
           <li><a class="navbtn" href="#classes">Classes</a></li>
@@ -34,8 +38,8 @@
       </nav>
     </header>
 
-    <div id="content" class="content">
-      <section id="about" class="section about">
+    <div id="content full" class="content">
+      <section id="about" class="section full default-padding default-grid about">
         <h1 class="center head-main">About</h1>
         <p class="about-text">
           Hello, I am a pending graduate from Portland State University with a
@@ -55,12 +59,12 @@
           <img class="profile" src="images/profile.jpg" alt="Developer Profile Image" />
         </div>
       </section>
-      <section id="prev" class="section prev">
+      <section id="prev" class="section full default-padding default-grid prev">
         <h1 class="center head-main">Work</h1>
         <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion-->
-        <div class="work">
-          <button class="accord">Best Buy - Inventory Specialist</button>
-          <div class="work-block">
+        <div class="work full">
+          <button class="accord full">Best Buy - Inventory Specialist</button>
+          <div class="work-block full default-padding">
             <ul>
               <li>Current Job (2019-Present)</li>
               <li>Deals with working with Inventory Management Systems.</li>
@@ -75,8 +79,8 @@
               </li>
             </ul>
           </div>
-          <button class="accord">Sears - Inventory Specialist</button>
-          <div class="work-block">
+          <button class="accord full">Sears - Inventory Specialist</button>
+          <div class="work-block full default-padding">
             <ul>
               <li>Past Job (2018-2019)</li>
               <li>Deals with working with Inventory Management Systems.</li>
@@ -91,10 +95,10 @@
               </li>
             </ul>
           </div>
-          <button class="accord">
+          <button class="accord full">
             Little Engineers - Instructor/Technician
           </button>
-          <div class="work-block">
+          <div class="work-block full default-padding">
             <ul>
               <li>Past Job (2015-2019)</li>
               <li>
@@ -117,9 +121,9 @@
           </div>
         </div>
       </section>
-      <section id="classes" class="section classes">
+      <section id="classes" class="section full default-padding default-grid classes">
         <h1 class="center head-main">Classes</h1>
-        <div class="upper-div">
+        <div class="upper-div default-padding">
           <h2 class="center">Upper Division</h2>
           <ul class>
             <li>CS300 - Elements of Software Engineering</li>
@@ -131,7 +135,7 @@
             <li>CS486 - Introduction to Database Management Systems</li>
           </ul>
         </div>
-        <div class="lower-div">
+        <div class="lower-div default-padding">
           <h2 class="center">Lower Division</h2>
           <ul>
             <li>CS162 - Introduction to Computer Science</li>
@@ -145,7 +149,7 @@
             </li>
           </ul>
         </div>
-        <div class="elec">
+        <div class="elec default-padding">
           <h2 class="center">Electives</h2>
           <ul>
             <li>CS 311 Computational Structures</li>
@@ -157,75 +161,75 @@
           </ul>
         </div>
       </section>
-      <section id="skills" class="section skills">
+      <section id="skills" class="section full default-padding default-grid skills">
         <h1 class="center head-main">Skills</h1>
-        <div class="tech">
+        <div class="tech default-padding">
           <h2 class="center">Technical</h2>
           <!--https://www.w3schools.com/howto/howto_css_skill_bar.asp-->
-          <div class="skill-container">
+          <div class="skill-container full default-padding">
             <div class="skill html">
               <p>HTML</p>
               <p>80%</p>
             </div>
           </div>
-          <div class="skill-container">
+          <div class="skill-container full default-padding">
             <div class="skill css">
               <p>CSS</p>
               <p>70%</p>
             </div>
           </div>
-          <div class="skill-container">
+          <div class="skill-container full default-padding">
             <div class="skill javascript">
               <p>JavaScript</p>
               <p>65%</p>
             </div>
           </div>
-          <div class="skill-container">
+          <div class="skill-container full default-padding">
             <div class="skill cpp">
               <p>C++</p>
               <p>90%</p>
             </div>
           </div>
-          <div class="skill-container">
+          <div class="skill-container full default-padding">
             <div class="skill java">
               <p>Java</p>
               <p>80%</p>
             </div>
           </div>
-          <div class="skill-container">
+          <div class="skill-container full default-padding">
             <div class="skill python">
               <p>Python</p>
               <p>85%</p>
             </div>
           </div>
         </div>
-        <div class="pers">
+        <div class="pers default-padding">
           <h2 class="center">Personal</h2>
-          <div class="skill-container">
+          <div class="skill-container full default-padding">
             <div class="skill multi">
               <p>Multitasking</p>
               <p>90%</p>
             </div>
           </div>
-          <div class="skill-container">
+          <div class="skill-container full default-padding">
             <div class="skill organ">
               <p>Organization</p>
               <p>95%</p>
             </div>
           </div>
-          <div class="skill-container">
+          <div class="skill-container full default-padding">
             <div class="skill team">
               <p>Teamwork</p>
               <p>85%</p>
             </div>
           </div>
-          <div class="skill-container">
+          <div class="skill-container full default-padding">
             <div class="skill comm">
               <p>Communication</p>
               <p>80%</p>
             </div>
           </div>
-          <div class="skill-container">
+          <div class="skill-container full default-padding">
             <div class="skill atte">
               <p>Attentive</p>
               <p>90%</p>
@@ -233,27 +237,27 @@
           </div>
         </div>
       </section>
-      <section id="projects" class="section projects">
+      <section id="projects" class="section full default-padding default-grid projects">
         <h1 class="center head">Projects</h1>
         <div class="proj">
           <!--https://getbootstrap.com/docs/5.2/components/carousel/ taken and altered from here-->
           <div id="carouselProjects" class="carousel slide" data-bs-ride="true">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
+                aria-current="true" aria-label="Slide 1 - Frupal"></button>
               <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
+                aria-label="Slide 2 - PDX-Effects"></button>
               <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+                aria-label="Slide 3 - KnowledgeGraph"></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <div class="proj-slide">
-                  <div class="link center">
+                <div class="proj-slide full default-grid">
+                  <div class="link center flex-center">
                     <a href="https://github.com/GroupD-TGOF/GroupD_TGOF"><i class="fa-brands fa-github center awesome">
                         Frupal</i></a>
                   </div>
-                  <div class="desc center">
+                  <div class="desc center flex-center">
                     <p>
                       This was a project done for CS300 where we created a
                       game with the specifications provided by the teacher.
@@ -267,13 +271,13 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="proj-slide">
-                  <div class="link center">
+                <div class="proj-slide full default-grid">
+                  <div class="link center flex-center">
                     <a href="https://github.com/PDX-Effects/sound_project"><i
                         class="fa-brands fa-github center awesome">
                         PDX-Effects</i></a>
                   </div>
-                  <div class="desc center">
+                  <div class="desc center flex-center">
                     <p>
                       This was a project done for CS410 where I programmed an
                       app with python as a part of a team where each of us
@@ -286,13 +290,13 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="proj-slide">
-                  <div class="link center">
+                <div class="proj-slide full default-grid">
+                  <div class="link center flex-center">
                     <a href="https://github.com/FallCapstone-GroupA/KnowledgeGraph"><i
                         class="fa-brands fa-github center awesome">
                         Knowledge Graph</i></a>
                   </div>
-                  <div class="desc center">
+                  <div class="desc center flex-center">
                     <p>
                       This was a project done for my capstone where we created
                       an app for a sponsor where the user enters text of any
@@ -318,29 +322,30 @@
           </div>
         </div>
       </section>
-      <section id="contact" class="section contact">
+      <section id="contact" class="section full contact default-grid">
         <h1 class="center head">Contact</h1>
-        <form class="form">
-          <div class="form-inner">
+        <form class="form full">
+          <div class="form-inner default-grid">
             <div class="form-name form-section">
               <label for="name" class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="name" placeholder="John Doe" />
+              <input type="text" class="form-control" id="name" placeholder="John Doe" required />
             </div>
             <div class="form-email form-section">
               <label for="name" class="form-label">Email</label>
-              <input type="text" class="form-control" id="email" placeholder="john.doe@gmail.com" />
+              <input type="text" class="form-control" id="email" placeholder="john.doe@gmail.com" required />
             </div>
             <div class="form-message form-section">
               <label for="message" class="form-label">Message</label>
-              <textarea type="text" class="form-control" id="message" placeholder="Your Message Here."></textarea>
+              <textarea type="text" class="form-control" id="message" placeholder="Your Message Here."
+                required></textarea>
             </div>
             <div class="form-submit form-section">
-              <button class="form-button" type="submit" value="Submit">
+              <button class="form-button full" type="submit" value="Submit">
                 Submit
               </button>
             </div>
           </div>
-            
+
         </form>
       </section>
     </div>

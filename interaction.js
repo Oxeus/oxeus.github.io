@@ -1,3 +1,15 @@
+//Makes sure that sidebar style is set onload, prevents first click failing
+function load() {
+  var media = window.matchMedia("(max-width: 768px)");
+  var media_large = window.matchMedia("(min-width: 769px)");
+  if (media.matches) {
+    closeNavbar("45px", "45px");
+  }
+  if (media_large.matches) {
+    openNavbar("175px", "175px");
+  }
+}
+
 //https://stackoverflow.com/questions/39903036/open-close-sidenav-bar-same-button
 //Only active on mobile
 function toggleNavbar() {
@@ -63,17 +75,6 @@ function change() {
   var navbtns = document.getElementsByClassName("navbtn");
   for (let i = 0; i < navbtns.length; ++i) {
     navbtns[i].addEventListener("click", toggleNavbar);
-  }
-}
-
-function load() {
-  var media = window.matchMedia("(max-width: 768px)");
-  var media_large = window.matchMedia("(min-width: 769px)");
-  if (media.matches) {
-    closeNavbar("45px", "45px");
-  }
-  if (media_large.matches) {
-    openNavbar("175px", "175px");
   }
 }
 

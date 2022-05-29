@@ -1,5 +1,7 @@
+/*Globals*/
 * {
   --sidebar-width-lg: 175px;
+  --sidebar-width-sm: 45px;
   /*https://hookagency.com/blog/website-color-schemes/*/
   --dark-blue: #12232e;
   --lighter-blue: #007cc7;
@@ -11,9 +13,10 @@
   --text: var(--shadow-of-light-blue);
 }
 
+/*Media Queries*/
 @media only screen and (max-width: 414px) {
   .sidebar {
-    width: 45px;
+    width: var(--sidebar-width-sm);
   }
 
   #toggle {
@@ -21,7 +24,7 @@
   }
 
   .content {
-    margin-left: 45px;
+    margin-left: var(--sidebar-width-sm);
   }
 
   .about {
@@ -51,7 +54,7 @@
   }
 
   .form {
-    padding: 100px 10px 100px 10px;
+    padding: 0px;
   }
 
   .form-inner {
@@ -66,7 +69,7 @@
 
 @media only screen and (min-width: 415px) and (max-width: 768px) {
   .sidebar {
-    width: 45px;
+    width: var(--sidebar-width-sm);
   }
 
   #toggle {
@@ -74,7 +77,7 @@
   }
 
   .content {
-    margin-left: 45px;
+    margin-left: var(--sidebar-width-sm);
   }
 
   .about {
@@ -103,7 +106,7 @@
   }
 
   .form {
-    padding: 100px 0px 100px 0px;
+    padding: 0px;
   }
 
   .form-inner {
@@ -151,7 +154,7 @@
   }
 
   .form {
-    padding: 100px 100px 100px 100px;
+    padding: 0px;
   }
 
   .form-inner {
@@ -203,8 +206,9 @@
   }
 
   .form {
-    padding: 100px 200px 100px 200px;
+    padding: 0px 10%;
   }
+
   .form-inner {
     grid-template-areas:
       "head head"
@@ -214,32 +218,26 @@
   }
 }
 
+/*Body*/
 html,
 body {
   height: 100vh;
   width: 100vw;
-  margin: 0;
-  padding: 0;
   background-color: var(--back);
   color: var(--text);
 }
 
+/*Main Wrapper*/
 .main-wrapper {
   height: 100%;
-  width: 100%;
   display: flex;
 }
 
-.toggle-container {
-  display: block;
-  width: 100%;
-  height: 46px;
-}
-
+/*Sidebar*/
 /*https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp - Inspiration*/
 .sidebar {
-  height: 100vh;
   position: fixed;
+  height: 100vh;
   z-index: 999;
   background-color: var(--side);
   overflow-x: hidden;
@@ -247,19 +245,24 @@ body {
 }
 
 .sidebar-content {
+  width: var(--sidebar-width-lg);
   list-style-type: none;
   text-align: center;
   margin: auto;
   padding: 0;
-  width: var(--sidebar-width-lg);
+}
+
+.toggle-container {
+  display: block;
+  height: 46px;
 }
 
 .sidebar-content li a {
   display: block;
+  width: 100%;
   color: var(--text);
   padding: 20px;
   font-size: 20px;
-  width: 100%;
   text-decoration: none;
 }
 
@@ -279,16 +282,18 @@ body {
   color: var(--lighter-blue);
 }
 
+/*Main*/
 .content {
   height: 100%;
-  width: 100%;
   flex-grow: 1;
   overflow: auto;
 }
 
-.section {
+.default-padding {
   padding: 10px;
-  width: 100%;
+}
+
+.default-grid {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
@@ -298,14 +303,28 @@ body {
   text-align: center;
 }
 
+.full {
+  width: 100%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  margin-bottom: 100px;
+}
+
 .head-main {
   grid-area: head;
   font-size: 40px;
 }
 
+/*About Section*/
 .about-text {
   grid-area: text;
-  padding: 0;
   margin: auto;
   padding: 20px;
   font-size: 20px;
@@ -319,9 +338,9 @@ body {
 }
 
 .profile {
+  border-radius: 25px;
   max-width: 100%;
   max-height: 100%;
-  border-radius: 50px;
   border: 10px solid var(--dark-blue);
 }
 
@@ -333,21 +352,17 @@ body {
 
 .work {
   grid-area: work;
-  width: 100%;
   padding: 50px 10px 50px 10px;
 }
 
 .work-block {
-  width: 100%;
   display: none;
   border: 5px solid var(--dark-blue);
-  padding: 10px;
   text-align: left;
 }
 
 /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion */
 .accord {
-  width: 100%;
   background-color: var(--dark-blue);
   color: var(--shadow-of-light-blue);
   border: 2px solid var(--dark-blue);
@@ -359,40 +374,31 @@ body {
 }
 
 .classes {
-  width: 100%;
   text-align: left;
-  padding: 20px;
 }
 
 .upper-div {
   grid-area: upper;
-  padding: 10px;
 }
 
 .lower-div {
   grid-area: lower;
-  padding: 10px;
 }
 
 .elec {
   grid-area: elec;
-  padding: 10px;
 }
 
 .skills {
-  width: 100%;
   text-align: left;
-  padding: 10px;
 }
 
 .pers {
   grid-area: pers;
-  padding: 10px;
 }
 
 .tech {
   grid-area: tech;
-  padding: 10px;
 }
 
 /*https://www.w3schools.com/howto/howto_css_skill_bar.asp*/
@@ -400,17 +406,15 @@ body {
   background-color: var(--dark-blue);
   border-radius: 25px;
   margin-bottom: 10px;
-  padding: 10px;
-  width: 100%;
 }
 
 /*https://www.w3schools.com/howto/howto_css_skill_bar.asp*/
 .skill {
-  border-radius: 25px;
-  height: 25px;
-  background-color: var(--shadow-of-dark-blue);
   display: flex;
   justify-content: space-between;
+  height: 25px;
+  border-radius: 25px;
+  background-color: var(--shadow-of-dark-blue);
   padding: 0px 10px 0px 10px;
 }
 
@@ -444,7 +448,7 @@ body {
 }
 
 .organ {
-  width: 90%;
+  width: 95%;
 }
 
 .team {
@@ -460,7 +464,6 @@ body {
 }
 
 .projects {
-  width: 100%;
   padding: 20px;
   grid-template-areas:
     "head"
@@ -472,15 +475,11 @@ body {
 }
 
 .proj-slide {
-  background-color: var(--dark-blue);
-  border-radius: 25px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
   grid-template-areas:
     "link"
     "description";
+  background-color: var(--dark-blue);
+  border-radius: 25px;
 }
 
 .carousel-control-prev {
@@ -495,9 +494,6 @@ body {
   grid-area: link;
   padding: 30px;
   height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .awesome {
@@ -508,17 +504,10 @@ body {
 .desc {
   grid-area: description;
   padding: 0px 15% 0px 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .contact {
-  width: 100%;
   padding: 20px;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
   grid-template-areas:
     "head"
     "form";
@@ -526,13 +515,9 @@ body {
 
 .form {
   grid-area: form;
-  width: 100%;
 }
 
 .form-inner {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
   background-color: var(--dark-blue);
   border-radius: 25px;
 }
@@ -543,6 +528,7 @@ body {
 
 .form-control {
   border: 2px solid var(--lightest-blue);
+  border-radius: 25px;
 }
 
 .form-name {
@@ -562,7 +548,6 @@ body {
 }
 
 .form-button {
-  width: 100%;
   border-radius: 25px;
   border: 2px solid var(--lightest-blue);
   background-color: var(--shadow-of-dark-blue);
