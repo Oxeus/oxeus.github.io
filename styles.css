@@ -44,6 +44,10 @@
     "tech"
     "pers";
   }
+
+  .desc {
+    height: 450px;
+  }
 }
 
 @media only screen and (min-width: 415px) and (max-width: 768px) {
@@ -78,6 +82,10 @@
       "tech"
       "pers";
   }
+
+  .desc {
+    height: 350px;
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -109,6 +117,10 @@
       "head head"
       "tech pers";
   }
+
+  .desc {
+    height: 300px;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -139,6 +151,14 @@
     grid-template-areas:
       "head head"
       "tech pers";
+  }
+
+  .proj {
+    padding: 20px 10% 20px 10%;
+  }
+
+  .desc {
+    height: 250px;
   }
 }
 
@@ -404,26 +424,44 @@ body {
 
 .proj-slide {
   background-color: var(--dark-blue);
+  border-radius: 25px;
   width: 100%;
-  height: 500px;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
   grid-template-areas:
   "link"
   "description";
+  
+}
+
+.carousel-control-prev {
+  grid-area: prev;
+}
+
+.carousel-control-next {
+  grid-area: next;
 }
 
 .link {
   grid-area: link;
   padding: 30px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .awesome {
   color: var(--shadow-of-light-blue);
-  text-overflow: wrap;
+  margin: auto;
+  font-size: 48px;
 }
 
 .desc {
   grid-area: description;
+  padding: 0px 15% 0px 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
