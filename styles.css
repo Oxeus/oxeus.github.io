@@ -1,5 +1,5 @@
 * {
-  --sidebar-width: 175px;
+  --sidebar-width-lg: 175px;
   /*https://hookagency.com/blog/website-color-schemes/*/
   --dark-blue: #12232e;
   --lighter-blue: #007cc7;
@@ -9,7 +9,6 @@
   --side: var(--dark-blue);
   --back: var(--shadow-of-dark-blue);
   --text: var(--shadow-of-light-blue);
-  box-sizing: border-box;
 }
 
 @media only screen and (max-width: 414px) {
@@ -24,12 +23,14 @@
   .content {
     margin-left: 45px;
   }
+
   .about {
     grid-template-areas:
       "head head"
       "image image"
       "text text";
   }
+
   .classes {
     grid-template-areas:
       "head"
@@ -40,13 +41,26 @@
 
   .skills {
     grid-template-areas:
-    "head"
-    "tech"
-    "pers";
+      "head"
+      "tech"
+      "pers";
   }
 
   .desc {
-    height: 450px;
+    height: 500px;
+  }
+
+  .form {
+    padding: 100px 10px 100px 10px;
+  }
+
+  .form-inner {
+    grid-template-areas:
+      "head head"
+      "name name"
+      "email email"
+      "message message"
+      "submit submit";
   }
 }
 
@@ -62,6 +76,7 @@
   .content {
     margin-left: 45px;
   }
+
   .about {
     grid-template-areas:
       "head head head"
@@ -86,11 +101,23 @@
   .desc {
     height: 350px;
   }
+
+  .form {
+    padding: 100px 0px 100px 0px;
+  }
+
+  .form-inner {
+    grid-template-areas:
+      "head head"
+      "name email"
+      "message message"
+      "submit submit";
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .sidebar {
-    width: var(--sidebar-width);
+    width: var(--sidebar-width-lg);
   }
 
   #toggle {
@@ -98,8 +125,9 @@
   }
 
   .content {
-    margin-left: var(--sidebar-width);
+    margin-left: var(--sidebar-width-lg);
   }
+
   .about {
     grid-template-areas:
       "head head"
@@ -121,14 +149,27 @@
   .desc {
     height: 300px;
   }
+
+  .form {
+    padding: 100px 100px 100px 100px;
+  }
+
+  .form-inner {
+    grid-template-areas:
+      "head head"
+      "name email"
+      "message message"
+      "submit submit";
+  }
 }
 
 @media only screen and (min-width: 1025px) {
   .sidebar {
-    width: var(--sidebar-width);
+    width: var(--sidebar-width-lg);
   }
+
   .content {
-    margin-left: var(--sidebar-width);
+    margin-left: var(--sidebar-width-lg);
   }
 
   #toggle {
@@ -160,6 +201,17 @@
   .desc {
     height: 250px;
   }
+
+  .form {
+    padding: 100px 200px 100px 200px;
+  }
+  .form-inner {
+    grid-template-areas:
+      "head head"
+      "name email"
+      "message message"
+      "submit submit";
+  }
 }
 
 html,
@@ -186,7 +238,7 @@ body {
 
 /*https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp - Inspiration*/
 .sidebar {
-  height: 100%;
+  height: 100vh;
   position: fixed;
   z-index: 999;
   background-color: var(--side);
@@ -199,7 +251,7 @@ body {
   text-align: center;
   margin: auto;
   padding: 0;
-  width: var(--sidebar-width);
+  width: var(--sidebar-width-lg);
 }
 
 .sidebar-content li a {
@@ -232,7 +284,6 @@ body {
   width: 100%;
   flex-grow: 1;
   overflow: auto;
-  transition: 0.5s;
 }
 
 .section {
@@ -246,7 +297,6 @@ body {
 .center {
   text-align: center;
 }
-
 
 .head-main {
   grid-area: head;
@@ -302,7 +352,6 @@ body {
   color: var(--shadow-of-light-blue);
   border: 2px solid var(--dark-blue);
   font-size: 20px;
-  transition: 0.5s;
 }
 
 .accord:hover {
@@ -413,9 +462,9 @@ body {
 .projects {
   width: 100%;
   padding: 20px;
-  grid-template-areas: 
-  "head"
-  "proj";
+  grid-template-areas:
+    "head"
+    "proj";
 }
 
 .proj {
@@ -430,9 +479,8 @@ body {
   grid-template-columns: auto;
   grid-template-rows: auto;
   grid-template-areas:
-  "link"
-  "description";
-  
+    "link"
+    "description";
 }
 
 .carousel-control-prev {
@@ -446,7 +494,7 @@ body {
 .link {
   grid-area: link;
   padding: 30px;
-  height: 200px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -454,8 +502,7 @@ body {
 
 .awesome {
   color: var(--shadow-of-light-blue);
-  margin: auto;
-  font-size: 48px;
+  font-size: 32px;
 }
 
 .desc {
@@ -464,4 +511,60 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.contact {
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "head"
+    "form";
+}
+
+.form {
+  grid-area: form;
+  width: 100%;
+}
+
+.form-inner {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  background-color: var(--dark-blue);
+  border-radius: 25px;
+}
+
+.form-section {
+  padding: 20px;
+}
+
+.form-control {
+  border: 2px solid var(--lightest-blue);
+}
+
+.form-name {
+  grid-area: name;
+}
+
+.form-email {
+  grid-area: email;
+}
+
+.form-message {
+  grid-area: message;
+}
+
+.form-submit {
+  grid-area: submit;
+}
+
+.form-button {
+  width: 100%;
+  border-radius: 25px;
+  border: 2px solid var(--lightest-blue);
+  background-color: var(--shadow-of-dark-blue);
+  color: var(--shadow-of-light-blue);
 }

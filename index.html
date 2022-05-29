@@ -17,20 +17,22 @@
 
 <body onload="load();">
   <main class="main-wrapper">
-    <nav id="sidebar" class="sidebar">
-      <div class="toggle-container">
-        <!--https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp-->
-        <a id="toggle" href="javascript:void(0)" class="menu-toggle" onclick="toggleNavbar()">☰</a>
-      </div>
-      <ul id="sidebar-content" class="sidebar-content">
-        <li><a class="navbtn" href="#about">About</a></li>
-        <li><a class="navbtn" href="#prev">Work</a></li>
-        <li><a class="navbtn" href="#classes">Classes</a></li>
-        <li><a class="navbtn" href="#skills">Skills</a></li>
-        <li><a class="navbtn" href="#projects">Projects</a></li>
-        <li><a class="navbtn" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <header>
+      <nav id="sidebar" class="sidebar">
+        <div class="toggle-container">
+          <!--https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp-->
+          <a id="toggle" href="javascript:void(0)" class="menu-toggle" onclick="toggleNavbar()">☰</a>
+        </div>
+        <ul id="sidebar-content" class="sidebar-content">
+          <li><a class="navbtn" href="#about">About</a></li>
+          <li><a class="navbtn" href="#prev">Work</a></li>
+          <li><a class="navbtn" href="#classes">Classes</a></li>
+          <li><a class="navbtn" href="#skills">Skills</a></li>
+          <li><a class="navbtn" href="#projects">Projects</a></li>
+          <li><a class="navbtn" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <div id="content" class="content">
       <section id="about" class="section about">
@@ -318,7 +320,28 @@
       </section>
       <section id="contact" class="section contact">
         <h1 class="center head">Contact</h1>
-        <form></form>
+        <form class="form">
+          <div class="form-inner">
+            <div class="form-name form-section">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" placeholder="John Doe" />
+            </div>
+            <div class="form-email form-section">
+              <label for="name" class="form-label">Email</label>
+              <input type="text" class="form-control" id="email" placeholder="john.doe@gmail.com" />
+            </div>
+            <div class="form-message form-section">
+              <label for="message" class="form-label">Message</label>
+              <textarea type="text" class="form-control" id="message" placeholder="Your Message Here."></textarea>
+            </div>
+            <div class="form-submit form-section">
+              <button class="form-button" type="submit" value="Submit">
+                Submit
+              </button>
+            </div>
+          </div>
+            
+        </form>
       </section>
     </div>
   </main>
