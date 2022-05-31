@@ -51,14 +51,16 @@ function desktopNavbar(media_large) {
   }
 }
 
-function change() {
+function resize () {
   //https://www.w3schools.com/howto/howto_js_media_queries.asp
   var media = window.matchMedia("(max-width: 768px)");
   media.addEventListener("change", mobileNavbar);
 
   var media_large = window.matchMedia("(min-width: 769px)");
   media_large.addEventListener("change", desktopNavbar);
+}
 
+function accord () {
   //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion
   var acc = document.getElementsByClassName("accord");
   for (let i = 0; i < acc.length; ++i) {
@@ -72,10 +74,19 @@ function change() {
       }
     });
   }
+}
+
+function navButtons () {
   var navbtns = document.getElementsByClassName("navbtn");
   for (let i = 0; i < navbtns.length; ++i) {
     navbtns[i].addEventListener("click", toggleNavbar);
   }
+}
+
+function change() {
+  resize();
+  accord();
+  navButtons();
 }
 
 change();
