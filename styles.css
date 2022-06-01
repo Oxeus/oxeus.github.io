@@ -480,6 +480,7 @@ body {
 
 .proj-slide {
   grid-template-areas:
+    "head"
     "link"
     "description";
   background-color: var(--dark-blue);
@@ -496,13 +497,11 @@ body {
 
 .link {
   grid-area: link;
-  padding: 30px;
-  height: 150px;
 }
 
 .awesome {
   color: var(--shadow-of-light-blue);
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .desc {

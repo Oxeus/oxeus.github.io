@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Resume - Adam La Fleur</title>
-  <link rel="icon" href="images/name.png" type="icon/png">
+  <link rel="icon" href="images/name.png" type="icon/png" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
@@ -26,7 +26,9 @@
           <a id="toggle" href="javascript:void(0)" class="menu-toggle" onclick="toggleNavbar()">☰</a>
         </div>
         <ul id="sidebar-content" class="sidebar-content">
-          <li><a class="navbtn" href="#about"><img src="images/name.png" height="51px" width="75px" alt="home button"></a>
+          <li>
+            <a class="navbtn" href="#about"><img src="images/name.png" height="51px" width="75px"
+                alt="home button" /></a>
           </li>
           <li><a class="navbtn" href="#about">About</a></li>
           <li><a class="navbtn" href="#prev">Work</a></li>
@@ -56,7 +58,7 @@
           reach me at the contact form below.
         </p>
         <div class="profile-container">
-          <img class="profile" src="images/profile.jpg" alt="Site Developer"/>
+          <img class="profile" src="images/profile.jpg" alt="Site Developer" />
         </div>
       </section>
       <section id="prev" class="section full default-padding default-grid prev">
@@ -247,15 +249,16 @@
                 aria-current="true" aria-label="Slide 1 - Frupal"></button>
               <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="1"
                 aria-label="Slide 2 - PDX-Effects"></button>
-              <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="2"
-                aria-label="Slide 3 - KnowledgeGraph"></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="proj-slide full default-grid">
+                  <h2 class="head center flex-center default-padding">
+                    Frupal
+                  </h2>
                   <div class="link center flex-center">
                     <a href="https://github.com/GroupD-TGOF/GroupD_TGOF"><i class="fa-brands fa-github center awesome">
-                        Frupal</i></a>
+                        Github</i></a>
                   </div>
                   <div class="desc center flex-center">
                     <p>
@@ -272,10 +275,13 @@
               </div>
               <div class="carousel-item">
                 <div class="proj-slide full default-grid">
+                  <h2 class="head center flex-center default-padding">
+                    PDX-Effects
+                  </h2>
                   <div class="link center flex-center">
                     <a href="https://github.com/PDX-Effects/sound_project"><i
                         class="fa-brands fa-github center awesome">
-                        PDX-Effects</i></a>
+                        Github</i></a>
                   </div>
                   <div class="desc center flex-center">
                     <p>
@@ -285,27 +291,6 @@
                       the program. The goal was to allow the user to make a
                       basic tune using chords or load there own song then they
                       can alter it using effects.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="proj-slide full default-grid">
-                  <div class="link center flex-center">
-                    <a href="https://github.com/FallCapstone-GroupA/KnowledgeGraph"><i
-                        class="fa-brands fa-github center awesome">
-                        Knowledge Graph</i></a>
-                  </div>
-                  <div class="desc center flex-center">
-                    <p>
-                      This was a project done for my capstone where we created
-                      an app for a sponsor where the user enters text of any
-                      size (larger chunks take longer) and a knowledge graph
-                      will be sent back showing the relationship between nouns
-                      and terms. The app was done in django with the backend
-                      for natural language processing done in Python. I worked
-                      on the frontend and part of the backend dealing with
-                      javascript http requests to the backend.
                     </p>
                   </div>
                 </div>
@@ -345,7 +330,6 @@
               </button>
             </div>
           </div>
-
         </form>
       </section>
     </div>
