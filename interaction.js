@@ -8,6 +8,64 @@ function load() {
   if (media_large.matches) {
     openNavbar("175px", "175px");
   }
+  personal_projects();
+}
+
+function personal_projects() {
+  $.ajax({
+    url: "https://api.github.com/users/oxeus/repos",
+    type: "GET",
+    dataType: 'json',
+    success: function(data)
+    {
+      var proj = document.getElementById("proj-head");
+      proj.innerText = "Projects (" + data.length + ")";
+      for(let i = 0; i < data.length; ++i)
+      {
+        var element = data[i];
+
+        var holder = document.getElementById("inner");
+        var proj_item = document.createElement("div");
+        proj_item.className = "carousel-item";
+        if(i == 0) proj_item.classList.add("active");
+
+        var proj_slide = document.createElement("div");
+        proj_slide.className = "proj-slide full default-grid";
+
+        var proj_name = document.createElement("h2");
+        proj_name.className = "head center flex-center default-padding";
+        proj_name.innerText = element.name;
+
+        var proj_link = document.createElement("div");
+        proj_link.className = "link center flex-center";
+
+        var proj_url = document.createElement("a");
+        proj_url.href = element.html_url;
+
+        var proj_icon = document.createElement("i");
+        proj_icon.className = "fa-brands fa-github center awesome";
+        proj_icon.innerText = " Github";
+
+        var proj_desc = document.createElement("div");
+        proj_desc.className = "desc center flex-center";
+
+        var proj_para = document.createElement("p");
+        proj_para.innerText = element.description;
+
+        proj_desc.appendChild(proj_para);
+
+        proj_url.appendChild(proj_icon);
+        proj_link.appendChild(proj_url);
+        
+        proj_slide.appendChild(proj_name);
+        proj_slide.appendChild(proj_link);
+        proj_slide.appendChild(proj_desc);
+
+        proj_item.appendChild(proj_slide);
+        holder.appendChild(proj_item);
+      }
+    }
+  });
 }
 
 //https://stackoverflow.com/questions/39903036/open-close-sidenav-bar-same-button
@@ -87,6 +145,10 @@ function change() {
   resize();
   accord();
   navButtons();
+}
+
+function send_contact() {
+  
 }
 
 change();
